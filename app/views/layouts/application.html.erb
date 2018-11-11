@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CarApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= link_to "All Companies", companies_path%>
+  <%= link_to "Add Company",new_company_path %>
+  ,
+  <%= link_to "All Cars", cars_path %>
+  <%= link_to "Add Car", new_car_path %>
+    <%= yield %>
+  </body>
+</html>

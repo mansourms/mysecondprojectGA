@@ -1,0 +1,17 @@
+
+<h1>Information about Company</h1>
+<label>Name: </label>
+<%= @info_company.name %>
+<br>
+<label>Country: </label>
+<%= @info_company.country %>
+<br>
+<%= link_to "Edit",edit_company_path(@info_company) %>
+<%= link_to "Delete",company_path(@info_company), method: :delete%>
+<hr>
+<h1>All Cars</h1> 
+<ul>
+<%  @cars.each do |car| %>
+<li><%= car.name %></li>
+<% end%>
+</ul>

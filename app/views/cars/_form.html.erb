@@ -1,0 +1,14 @@
+<%= form_for @new_car do |f| %>
+<%= f.label  :name %>
+<%= f.text_field :name %>
+<%=  f.label :year %> 
+<%= f.select( :year, @arr) %> 
+<%= f.label :color %>
+<%= f.text_field :color %>
+<%=  f.label :style %> 
+<%= f.select( :style, @styles) %> 
+<%= f.label :company_id %>
+<%= f.collection_select(:company_id,Company.all,:id,:name) %>
+<%= f.submit %>
+<% end%>
+

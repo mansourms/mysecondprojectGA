@@ -1,0 +1,16 @@
+<h1> information about Car</h1>
+<label> name:</label>
+<%= @info_car.name %>
+<br>
+<label> year:</label>
+<%= @info_car.year%>
+<br>
+<label> color:</label>
+<%= @info_car.color %>
+<br>
+<label> style:</label>
+<%= @info_car.style %>
+<br>
+<%= link_to "Edit", edit_car_path(@info_car) %>
+<%= link_to "delete",car_path(@info_car), method: :delete %>
+
