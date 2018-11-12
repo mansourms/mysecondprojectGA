@@ -14,3 +14,6 @@
 <%= link_to "Edit", edit_car_path(@info_car) %>
 <%= link_to "delete",car_path(@info_car), method: :delete %>
 
+<% @info_car.images.each do |img| %>
+    <%= image_tag img.url %>
+<% end %>

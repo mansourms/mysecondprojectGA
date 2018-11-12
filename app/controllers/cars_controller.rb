@@ -21,6 +21,10 @@ class CarsController < ApplicationController
 
   def create
     car = Car.create(car_params)
+    params[:car][:images].each do |img|
+      req = Cloudinary::Uploader.upload(img)
+      car.images.create(url: req["url"])
+    end
     redirect_to cars_path (car)
   end
 
