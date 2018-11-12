@@ -1,2 +1,6 @@
-<h1>Images#edit</h1>
-<p>Find me in app/views/images/edit.html.erb</p>
+<h1>Edit Image</h1>
+<%= form_for @image do |f| %>
+<%=  f.label :url%>
+<%= f.file_field :url %>
+<%= f.submit %>
+<% end %>
