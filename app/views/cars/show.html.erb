@@ -1,6 +1,10 @@
 <h1> information about Car</h1>
-<label> name:</label>
+<div class="row">
+<div class="col s3">
+<label > name:</label>
 <%= @info_car.name %>
+</div>
+
 <br>
 <label> year:</label>
 <%= @info_car.year%>
@@ -10,6 +14,8 @@
 <br>
 <label> style:</label>
 <%= @info_car.style %>
+</div>
+
 <br>
 
 <% @info_car.images.each do |img| %>

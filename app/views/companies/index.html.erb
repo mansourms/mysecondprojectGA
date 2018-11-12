@@ -1,7 +1,14 @@
-<h1>All Companies</h1>
+<h4>All Companies</h4>
 
-<ul>
-<% @companies.each do |company| %>
-<li><%=  link_to company.name, company_path(company) %></li>
+
+
+
+
+  <div class="collection">
+  <ul>
+ <% @companies.each do |company| %>
+   <li><a href="<%= company_path(company) %>" class="collection-item" style="font-size:29px;"><span class="badge" ></span ><%= company.name%></a></li> 
 <%  end%>
-</ul>
+    </ul>
+  </div>
+          

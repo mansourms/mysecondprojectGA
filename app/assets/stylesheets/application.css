@@ -23,3 +23,11 @@
     width: 100%;
     height: 500px;
 }
+
+.turbolinks-progress-bar {
+    height: 5px;
+    z-index: 1000000000000;
+    position: absolute;
+    top: 60px;
+    background-color: #16161d;
+  }

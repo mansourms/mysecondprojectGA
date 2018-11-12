@@ -4,17 +4,26 @@
     <title>CarApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
   <body>
-  <%= link_to "All Companies", companies_path%>
-  <%= link_to "Add Company",new_company_path %>
-  ,
-  <%= link_to "All Cars", cars_path %>
-  <%= link_to "Add Car", new_car_path %>
+  <nav>
+  <div class="nav-wrapper blue">
+  <ul id="nav-mobile" class="left hide-on-med-and-down ">
+          <li><%= link_to "All Companies", companies_path%></li>
+          <li><%= link_to "Add Company",new_company_path %></li>
+          <li><%= link_to "All Cars", cars_path %></li>
+          <li><%= link_to "Add Car", new_car_path,:id=>"newCar" %></li>
+  </ul>
+  </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
