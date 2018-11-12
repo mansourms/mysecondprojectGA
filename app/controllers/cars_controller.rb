@@ -25,7 +25,7 @@ class CarsController < ApplicationController
       req = Cloudinary::Uploader.upload(img)
       car.images.create(url: req["url"])
     end
-    redirect_to cars_path (car)
+    redirect_to cars_path(car)
   end
 
   def edit

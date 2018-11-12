@@ -18,5 +18,5 @@ Car.destroy_all
 
 Image.destroy_all
 # camray_img = Image.create(url: "", car_id: camray.id)
-# avalon_img = Image.create(url: "", car_id: avalon.id)
+# avalon_imgrail = Image.create(url: "", car_id: avalon.id)
 # altima_img = Image.create(url: "", car_id: altima.id)
