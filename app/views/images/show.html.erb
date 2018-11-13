@@ -1,6 +1,8 @@
 <br>
 <br>
-<%= image_tag @image.url,:class=>"imgBig"%>
+<div class="container">
+     <%= image_tag @image.url,:class=>"imgBig"%>
 <br>
 <%= link_to "Edit",edit_image_path %>
 <%= link_to "Delete",image_path(@image) , method: :delete %>
+      </div>

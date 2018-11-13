@@ -6,8 +6,15 @@
 
   <div class="collection">
   <ul>
+  <% @cars_number = 0 %>
  <% @companies.each do |company| %>
+ <% company.cars.each do |car| %>
+      <% @cars_number +=1 %>
+ <% end%>
+   <span class=" new badge " data-badge-caption="Cars "><%= @cars_number %></span>
+   <% @cars_number = 0 %>
    <li><a href="<%= company_path(company) %>" class="collection-item" style="font-size:29px;"><span class="badge" ></span ><%= company.name%></a></li> 
+  
 <%  end%>
     </ul>
   </div>

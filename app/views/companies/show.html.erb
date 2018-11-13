@@ -1,5 +1,5 @@
 
-<h1>Information about Company</h1>
+<h4>Information about Company</h4>
 <label>Name: </label>
 <%= @info_company.name %>
 <br>
@@ -9,9 +9,15 @@
 <%= link_to "Edit",edit_company_path(@info_company) %>
 <%= link_to "Delete",company_path(@info_company), method: :delete%>
 <hr>
-<h1>All Cars</h1> 
+<h4>All Cars</h4> 
+
+<div class="collection">
 <ul>
-<%  @cars.each do |car| %>
-<li><%= car.name %></li>
-<% end%>
+<% @cars.each do |car| %>
+
+ <li><a href="<%= car_path(car) %>" class="collection-item" style="font-size:29px;"><span class="badge" ></span ><%= car.name%></a></li> 
+<% end %>
+
 </ul>
+
+</div>
